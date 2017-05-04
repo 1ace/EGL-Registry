@@ -89,6 +89,16 @@
                     <replaceable>major_version</replaceable>.<replaceable>minor_version</replaceable>
                     space
                     <replaceable>vendor_specific_info</replaceable>
+                </para>
+                <para>
+                    If <parameter>display</parameter> is <constant>EGL_NO_DISPLAY</constant>, the
+                    <constant>EGL_VERSION</constant> string describes the supported client version.
+                    If <parameter>display</parameter> is a valid, initialized display, then the
+                    <constant>EGL_VERSION</constant> string describes the supported EGL version for
+                    <parameter>display</parameter>.
+                    The client version indicates that all EGL entry points which are needed for the
+                    supported client APIs are available at runtime, while the display version
+                    indicates which EGL functionality is supported for a display.
                 </para></listitem>
             </varlistentry>
             <varlistentry>

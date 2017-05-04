@@ -169,7 +169,7 @@
             <parameter>display</parameter> has not been initialized.
         </para>
         <para>
-            <constant>EGL_BAD_CONFIG</constant> is generated if
+            <constant>EGL_BAD_MATCH</constant> is generated if
             <parameter>config</parameter> is not an EGL frame buffer
             configuration, or does not support the current rendering
             API. This includes requesting creation of an OpenGL ES 1.x
