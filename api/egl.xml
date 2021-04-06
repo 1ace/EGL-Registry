@@ -575,7 +575,7 @@
         <enum value="0x31DC" name="EGL_PLATFORM_XCB_EXT"/>
         <enum value="0x31DD" name="EGL_PLATFORM_SURFACELESS_MESA"/>
         <enum value="0x31DE" name="EGL_PLATFORM_XCB_SCREEN_EXT"/>
-            <unused start="0x31DF" end="0x31DF"/>
+        <enum value="0x31DF" name="EGL_CONFIG_SELECT_GROUP_MESA"/>
     </enums>
 
     <!-- Due to an oversight in development, these enums alias the above MESA
@@ -3025,6 +3025,11 @@
         <extension name="EGL_KHR_wait_sync" supported="egl">
             <require>
                 <command name="eglWaitSyncKHR"/>
+            </require>
+        </extension>
+        <extension name="EGL_MESA_config_select_group" supported="egl">
+          <require>
+                <enum name="EGL_CONFIG_SELECT_GROUP_MESA"/>
             </require>
         </extension>
         <extension name="EGL_MESA_drm_image" supported="egl">

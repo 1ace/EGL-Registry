@@ -14,12 +14,12 @@ extern "C" {
 ** used to make the header, and the header can be found at
 **   http://www.khronos.org/registry/egl
 **
-** Khronos $Git commit SHA1: 5a9a7e3fcb $ on $Git commit date: 2020-08-24 11:05:32 -0700 $
+** Khronos $Git commit SHA1: b7b9bde84c $ on $Git commit date: 2021-04-06 15:53:59 +0200 $
 */
 
 #include <EGL/eglplatform.h>
 
-#define EGL_EGLEXT_VERSION 20201001
+#define EGL_EGLEXT_VERSION 20210406
 
 /* Generated C header for:
  * API: egl
@@ -578,7 +578,7 @@ EGLAPI EGLBoolean EGLAPIENTRY eglQuerySurfacePointerANGLE (EGLDisplay dpy, EGLSu
 #define EGL_ANGLE_sync_control_rate 1
 typedef EGLBoolean (EGLAPIENTRYP PFNEGLGETMSCRATEANGLEPROC) (EGLDisplay dpy, EGLSurface surface, EGLint *numerator, EGLint *denominator);
 #ifdef EGL_EGLEXT_PROTOTYPES
-EGLAPI EGLBoolean EGLAPIENTRY eglGetMscRateANGLE(EGLDisplay dpy, EGLSurface surface, EGLint *numerator, EGLint *denominator);
+EGLAPI EGLBoolean EGLAPIENTRY eglGetMscRateANGLE (EGLDisplay dpy, EGLSurface surface, EGLint *numerator, EGLint *denominator);
 #endif
 #endif /* EGL_ANGLE_sync_control_rate */
 
@@ -1002,6 +1002,11 @@ EGLAPI EGLSurface EGLAPIENTRY eglCreatePixmapSurfaceHI (EGLDisplay dpy, EGLConfi
 #define EGL_NATIVE_BUFFER_MULTIPLANE_SEPARATE_IMG 0x3105
 #define EGL_NATIVE_BUFFER_PLANE_OFFSET_IMG 0x3106
 #endif /* EGL_IMG_image_plane_attribs */
+
+#ifndef EGL_MESA_config_select_group
+#define EGL_MESA_config_select_group 1
+#define EGL_CONFIG_SELECT_GROUP_MESA      0x31DF
+#endif /* EGL_MESA_config_select_group */
 
 #ifndef EGL_MESA_drm_image
 #define EGL_MESA_drm_image 1
